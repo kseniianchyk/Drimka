@@ -1,0 +1,1003 @@
+    @import 'vars.scss';
+    @import 'fonts.scss';
+    @import 'reset-styles.scss';
+    // main
+    .main {
+        background: url('../images/main-bg.png') no-repeat #412C1E;
+        background-size: cover;
+        background-blend-mode: overlay;
+        position: relative;
+        .lines__outer,
+        .lines__inner {
+            border-left: 0.5px solid rgba(255, 255, 255, 0.2);
+            border-right: 0.5px solid rgba(255, 255, 255, 0.2);
+        }
+        &__container {
+            @include container;
+        }
+        &__content {
+            @include display-btw;
+            margin: 62px 0 0 82px;
+        }
+        &__media-mac {
+            display: none;
+        }
+        &__text {
+            font-family: Montserrat-Bold, sans-serif;
+            color: $color-white;
+            max-width: 395px;
+            position: relative;
+            .leaf--1 {
+                width: 40px;
+                height: 48px;
+                top: -86%;
+                left: 50%;
+                animation-delay: 4s;
+            }
+            .leaf--2 {
+                top: 63px;
+                right: 30px;
+                width: 32.53px;
+                height: 39.03px;
+                transform: rotate(-67.35deg);
+                animation-delay: 5s;
+            }
+            .leaf--3 {
+                top: 125px;
+                left: -15px;
+                width: 31.31px;
+                height: 37.68px;
+                transform: rotate(-75deg);
+                animation-delay: 6s;
+            }
+            .leaf--4 {
+                bottom: -45%;
+                right: 31%;
+                width: 24.8px;
+                height: 29.76px;
+                transform: rotate(-67.35deg);
+                animation-delay: 7s;
+            }
+        }
+        &__suptitle {
+            font-size: 20px;
+            line-height: 98px;
+            animation-delay: 0;
+            --animate-duration: 2s;
+        }
+        &__title {
+            font-size: 64px;
+            line-height: 98px;
+            animation-delay: .5s;
+            --animate-duration: 2s;
+        }
+        &__subtitle {
+            font-size: 24px;
+            line-height: 35px;
+            animation-delay: 1s;
+            --animate-duration: 2s;
+        }
+        &__images {
+            position: relative;
+            z-index: 2;
+            .leaf--5 {
+                top: -50px;
+                left: 0;
+                width: 70px;
+                height: 84px;
+                transform: rotate(-81.9deg);
+                animation-delay: 8s;
+            }
+            .leaf--6 {
+                bottom: 105px;
+                left: -123px;
+                width: 70px;
+                height: 84px;
+                animation-delay: 9s;
+            }
+            .leaf--7 {
+                bottom: 0px;
+                left: 0px;
+                width: 32.53px;
+                height: 39.03px;
+                transform: rotate(-67.35deg);
+                animation-delay: 10s;
+            }
+        }
+        &__images-leaf {
+            position: absolute;
+            left: -238px;
+            bottom: 130px;
+            animation-delay: 3s;
+            --animate-duration: 2s;
+            z-index: -1;
+        }
+        &__images-mac {
+            animation-delay: 0;
+            --animate-duration: 2s;
+        }
+        &__images-iphone {
+            position: absolute;
+            bottom: 95px;
+            left: -51px;
+            animation-delay: 1s;
+            --animate-duration: 2s;
+        }
+        &__action {
+            @include container;
+            @include display-btw;
+            padding: 30px 0 79px 0;
+        }
+        &__social {
+            @include display-flex;
+            position: relative;
+            >a {
+                cursor: pointer;
+                z-index: 2;
+                >svg {
+                    margin-right: 20px;
+                }
+            }
+            .leaf--8 {
+                left: 0px;
+                width: 128px;
+                height: 154px;
+            }
+        }
+        &__lang {
+            font-size: 16px;
+            line-height: 20px;
+            color: $color-white;
+            .lang-item--active {
+                font-family: Montserrat-ExtraBold;
+            }
+        }
+        &__lang-item {
+            margin-left: 29px;
+        }
+    }
+    
+    // /main
+    // header
+    .header {
+        padding: 37px 0;
+        @include display-flex;
+        @include container;
+        .logo {
+            >a {
+                >img {
+                    width: 152px;
+                }
+            }
+        }
+        &__menu-list {
+            @include display-flex;
+            margin-left: 279px;
+        }
+        &__menu-link {
+            font-size: 16px;
+            line-height: 20px;
+            color: $color-white;
+            font-family: Montserrat-Regular, sans-serif;
+            margin-right: 54px;
+        }
+        &__menu-open {
+            @include display-flex;
+            margin-left: 223px;
+            .menu-open--link {
+                margin-right: 22px;
+            }
+        }
+    }
+    
+    // /header
+    // burger 
+    .burger {
+        width: 63px;
+        height: 60px;
+        background-color: $color-white;
+        padding: 21px 20px 22px 20px;
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+        >span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 9px;
+            bottom: 0;
+            margin: auto;
+            width: 15px;
+            height: 1px;
+            background: $color-brown;
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                top: 6px;
+                left: 0;
+                width: 23px;
+                height: 1px;
+                background: $color-brown;
+            }
+            &::before {
+                top: -6px;
+            }
+        }
+    }
+    
+    // /burger
+    // leaf-decore
+    .leaf {
+        background: url('../images/leaf.png') center no-repeat;
+        background-size: contain;
+        width: 30px;
+        height: 50px;
+        position: absolute;
+        --animate-duration: .5s;
+    }
+    
+    // /leaf-decore
+    // opacity-leaf-decore
+    .opacity-leaf-decore {
+        width: 400.55px;
+        height: 752.55px;
+        overflow: hidden;
+        position: absolute;
+        right: 0px;
+        z-index: 2;
+        opacity: .06;
+        >img {
+            width: 752.55px;
+            height: 752.55px;
+            animation-delay: 2s;
+            transform: rotate(342deg);
+        }
+    }
+    
+    // /opacity-leaf-decore
+    // lines
+    .lines {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 100%;
+        width: 1060px;
+        transform: translate(-50%);
+        pointer-events: none;
+        &__outer {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-left: 0.5px solid rgba(61, 35, 22, 0.2);
+            border-right: 0.5px solid rgba(61, 35, 22, 0.2);
+            margin: 0 auto;
+        }
+        &__inner {
+            position: relative;
+            top: 0;
+            width: 362px;
+            height: 100%;
+            border-left: 0.5px solid rgba(61, 35, 22, 0.2);
+            border-right: 0.5px solid rgba(61, 35, 22, 0.2);
+            margin: 0 auto;
+        }
+    }
+    
+    // /lines
+    // acquaintance
+    .acquaintance {
+        position: relative;
+        z-index: 2;
+        padding: 140px 0 124px 0;
+        &__save-leaf {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: $color-white;
+            width: 230px;
+            height: 40%;
+            z-index: 2;
+            animation-delay: 1s;
+        }
+        &__content {
+            text-align: center;
+            max-width: 598px;
+            margin: 0 auto;
+            position: inherit;
+            background-color: $color-white;
+        }
+        &__title {
+            padding-top: 23px;
+            margin: 0 auto 14px auto;
+            @include title;
+        }
+        &__text {
+            animation-delay: 1s;
+            font-size: 14px;
+            line-height: 202.9%;
+            font-family: Montserrat-Regular, sans-serif;
+            padding-bottom: 10px;
+            >span {
+                display: inline-block;
+                margin-top: 20px;
+            }
+            >span.acquaintance__media-text {
+                display: none;
+            }
+        }
+        &__media-text {
+            display: none;
+        }
+    }
+    
+    // /acquaintance
+    // strategy
+    .strategy {
+        padding: 135px 0 78px 0;
+        position: relative;
+        .opacity-leaf-decore {
+            top: -380px;
+        }
+        &__container {
+            @include display-btw;
+        }
+        &__img {
+            position: relative;
+        }
+        &__leaf {
+            background: url('../images/strategy-leaf-decor.png') center no-repeat;
+            background-size: contain;
+            position: absolute;
+            width: 30px;
+            height: 50px;
+            --animate-duration: 2.5s;
+            &.leaf-decore--1 {
+                bottom: -119px;
+                right: 37%;
+                width: 239px;
+                height: 207px;
+                animation: animate--1 12s linear;
+            }
+            &.leaf-decore--2 {
+                transform: rotate(212deg);
+                filter: blur(1px);
+                width: 78.38px;
+                height: 76.48px;
+                bottom: 7px;
+                left: 120px;
+                animation: animate--2 10s linear;
+            }
+            &.leaf-decore--3 {
+                transform: rotate(270deg);
+                width: 42.47px;
+                height: 37.67px;
+                opacity: .69;
+                filter: blur(1px);
+                bottom: -73px;
+                left: 170px;
+                animation: animate--3 15s linear;
+            }
+            &.leaf-decore--4 {
+                position: absolute;
+                width: 138px;
+                height: 165px;
+                transform: rotate(299deg);
+                filter: blur(2px);
+                top: -67px;
+                right: 233px;
+                z-index: -1;
+                opacity: 0.49;
+                animation: animate--4 10s linear;
+            }
+            &.leaf-decore--5 {
+                transform: rotate(207deg);
+                width: 42.53px;
+                height: 50.9px;
+                filter: blur(1px);
+                top: -166px;
+                left: 66px;
+                z-index: -1;
+                opacity: .59;
+                animation: animate--5 10s linear;
+            }
+        }
+        &__images-leaf {
+            position: absolute;
+            left: -150px;
+            top: -207px;
+            z-index: -1;
+            transform: rotate(77deg);
+            animation-delay: 2s;
+            --animate-duration: 2s;
+        }
+        &__images-mac {
+            --animate-duration: 2s;
+        }
+        &__content {
+            margin: 0 100px 0 35px;
+        }
+        &__title {
+            @include title;
+            position: relative;
+            margin-bottom: 20px;
+            &::after {
+                content: "СТРАТЕГІЯ";
+                position: absolute;
+                bottom: 7px;
+                left: -20px;
+                font-size: 87px;
+                line-height: 64px;
+                font-family: Montserrat-Bold, sans-serif;
+                color: rgba(61, 48, 40, 0.13);
+            }
+        }
+        &__subtitle {
+            font-size: 14px;
+            line-height: 202.9%;
+            color: $color-brown-dark;
+            font-family: Montserrat-Medium, sans-serif;
+            max-width: 512px;
+            animation-delay: 1s;
+        }
+        &__items {
+            @include display-flex;
+            flex-wrap: wrap;
+            align-items: end;
+            .item-slide--1 {
+                animation-delay: 1s;
+            }
+            .item-slide--2 {
+                animation-delay: 2s;
+            }
+            .item-slide--3 {
+                animation-delay: 1.5s;
+            }
+            .item-slide--4 {
+                animation-delay: 2.5s;
+            }
+        }
+        &__item {
+            @include display-flex;
+            align-items: end;
+            color: $color-brown-dark;
+            margin: 62px 0 0 0;
+            &.strategy__item--margin {
+                margin-right: 62px;
+            }
+        }
+        &__item-numb {
+            background: url('../images/strategy-numb-bg.png') center no-repeat;
+            background-size: cover;
+            text-align: center;
+            width: 70px;
+            height: 84px;
+            font-size: 48px;
+            line-height: 64px;
+            color: $color-white;
+            font-family: Montserrat-Bold, sans-serif;
+            padding-top: 10px;
+            filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.38));
+            margin-right: 15px;
+        }
+        &__item-text {
+            width: 175px;
+        }
+        &__item-title {
+            font-size: 20px;
+            line-height: 30px;
+            font-family: Montserrat-SemiBold, sans-serif;
+        }
+        &__item-subtitle {
+            font-size: 16px;
+            line-height: 26px;
+            font-family: Montserrat-Regular, sans-serif;
+        }
+    }
+    
+    // /strategy
+    // animation
+    // animation leaf block strategy
+    @keyframes animate--4 {
+        0% {
+            transform: translateY(-274px) rotate(0deg);
+        }
+        20% {
+            transform: translateY(-200px) rotate(65deg);
+        }
+        40% {
+            transform: translateY(-150px) rotate(110deg);
+        }
+        60% {
+            transform: translateY(-100px) rotate(180deg);
+        }
+        80% {
+            transform: translateY(-80px) rotate(230deg);
+        }
+        100% {
+            transform: translateY(0px) rotate(299deg);
+        }
+    }
+    
+    @keyframes animate--5 {
+        0% {
+            transform: translateY(-120px) rotate(0deg);
+        }
+        20% {
+            transform: translateY(-100px) rotate(45deg);
+        }
+        40% {
+            transform: translateY(-80px) rotate(100deg);
+        }
+        60% {
+            transform: translateY(-60px) rotate(160deg);
+        }
+        80% {
+            transform: translateY(-30px) rotate(200deg);
+        }
+        100% {
+            transform: translateY(0px) rotate(207deg);
+        }
+    }
+    
+    @keyframes animate--3 {
+        0% {
+            transform: translateY(-412px) rotate(0deg);
+        }
+        20% {
+            transform: translateY(-350px) rotate(45deg);
+        }
+        40% {
+            transform: translateY(-300px) rotate(100deg);
+        }
+        60% {
+            transform: translateY(-200px) rotate(160deg);
+        }
+        80% {
+            transform: translateY(-100px) rotate(200deg);
+        }
+        100% {
+            transform: translateY(0px) rotate(270deg);
+        }
+    }
+    
+    @keyframes animate--2 {
+        0% {
+            transform: translateY(-254px) rotate(0deg);
+        }
+        20% {
+            transform: translateY(-210px) rotate(45deg);
+        }
+        40% {
+            transform: translateY(-160px) rotate(100deg);
+        }
+        60% {
+            transform: translateY(-100px) rotate(160deg);
+        }
+        80% {
+            transform: translateY(-50px) rotate(200deg);
+        }
+        100% {
+            transform: translateY(0px) rotate(212deg);
+        }
+    }
+    
+    @keyframes animate--1 {
+        0% {
+            transform: translateY(-354px) rotate(0deg);
+            opacity: 0;
+        }
+        20% {
+            transform: translateY(-300px) rotate(-100deg);
+            opacity: .5;
+        }
+        40% {
+            transform: translateY(-250px) rotate(-200deg);
+            opacity: 1;
+        }
+        60% {
+            transform: translateY(-180px) rotate(-160deg);
+        }
+        80% {
+            transform: translateY(-100px) rotate(-100deg);
+        }
+        100% {
+            transform: translateY(0px) rotate(0deg);
+        }
+    }
+    
+    // /animation leaf block strategy
+    // animation wood block tasks
+    @keyframes wood-animate--1 {
+        0% {
+            transform: translateX(210px) rotate(0deg);
+        }
+        20% {
+            transform: translateX(160px) rotate(-90deg);
+        }
+        40% {
+            transform: translateX(110px) rotate(-130deg);
+        }
+        60% {
+            transform: translateX(60px) rotate(-200deg);
+        }
+        80% {
+            transform: translateX(30px) rotate(-270deg);
+        }
+        100% {
+            transform: translateX(0) rotate(-350deg);
+        }
+    }
+    
+    // /animation wood block tasks
+    // animation hope block tasks
+    @keyframes hope-animate--1 {
+        0% {
+            transform: translateY(-422px) rotate(0deg);
+        }
+        20% {
+            transform: translateY(-380px) rotate(-100deg);
+        }
+        40% {
+            transform: translateY(-280px) rotate(-150deg);
+        }
+        60% {
+            transform: translateY(-180px) rotate(-100deg);
+        }
+        80% {
+            transform: translateY(-100px) rotate(-50deg);
+        }
+        100% {
+            transform: translateY(0px) rotate(0deg);
+        }
+    }
+    
+    @keyframes hope-animate--2 {
+        0% {
+            transform: translateY(-400px) rotate(100deg);
+        }
+        20% {
+            transform: translateY(-300px) rotate(200deg);
+        }
+        40% {
+            transform: translateY(-250px) rotate(250deg);
+        }
+        60% {
+            transform: translateY(-180px) rotate(200deg);
+        }
+        80% {
+            transform: translateY(-90px) rotate(100deg);
+        }
+        100% {
+            transform: translateY(0) rotate(0deg);
+        }
+    }
+    
+    // /animation hope block tasks
+    // animation
+    // tasks block
+    .tasks {
+        position: relative;
+        &__wood-decore-media {
+            display: none;
+        }
+        &__opacity-left-wood {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        &__right-wood {
+            position: absolute;
+            right: 0;
+            top: 30%;
+        }
+        &__right-wood-decore {
+            position: absolute;
+            right: 0;
+            bottom: -230px;
+        }
+        &__container {
+            padding: 243px 0 200px 0;
+            @include container;
+            @include display-flex;
+            position: relative;
+        }
+        &__container-wood-decore {
+            position: absolute;
+            right: 149px;
+            top: 109px;
+            animation: wood-animate--1 1s linear;
+        }
+        &__item {
+            max-width: 425px;
+            color: $color-brown-dark;
+            position: relative;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "1";
+                font-size: 179px;
+                line-height: 64px;
+                color: rgba(61, 48, 40, 0.13);
+                text-transform: uppercase;
+                font-family: Montserrat-Bold, sans-serif;
+            }
+            &.item--second {
+                animation-delay: 1s;
+                &::before {
+                    content: "2";
+                }
+            }
+            &.item--first {
+                margin-right: 99px;
+            }
+        }
+        &__item-title {
+            font-size: 40px;
+            line-height: 64px;
+            font-family: Montserrat-Bold, sans-serif;
+        }
+        &__item-subtitle {
+            text-indent: 10px;
+            font-size: 16px;
+            line-height: 202.9%;
+            font-family: Montserrat-ExtraBold, sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 9px;
+        }
+        &__item-text {
+            text-indent: 13px;
+            font-size: 14px;
+            line-height: 202.9%;
+            font-family: Montserrat-Medium, sans-serif;
+            &>span {
+                margin-top: 30px;
+                display: block;
+                text-indent: 0px;
+            }
+        }
+    }
+    
+    // /tasks block
+    // results block
+    .results {
+        position: relative;
+        .lines {
+            z-index: -1;
+        }
+        .opacity-leaf-decore {
+            bottom: -278px;
+        }
+        &__container {
+            @include container;
+            padding: 140px 0 78px 0;
+        }
+        &__title {
+            @include title;
+            position: relative;
+            text-transform: uppercase;
+            &::after {
+                content: "Результати";
+                text-transform: uppercase;
+                position: absolute;
+                bottom: 9px;
+                left: -12px;
+                font-size: 87px;
+                line-height: 64px;
+                font-family: Montserrat-Bold, sans-serif;
+                color: rgba(61, 48, 40, 0.13);
+            }
+        }
+        &__subtitle {
+            font-size: 16px;
+            line-height: 202.9%;
+            color: $color-brown-dark;
+            text-transform: uppercase;
+            font-family: Montserrat-ExtraBold, sans-serif;
+            animation-delay: 1s;
+        }
+        &__items {
+            @include display-btw;
+            color: $color-brown-dark;
+            margin-top: 46px;
+            padding: 39px 0 30px 0;
+            background-color: $color-white;
+        }
+        &__item {
+            color: $color-brown-dark;
+            width: 410px;
+            &.item-slide--2 {
+                animation-delay: 1s;
+            }
+            &.item-slide--3 {
+                animation-delay: 2s;
+            }
+        }
+        &__item-header {
+            height: 135px;
+        }
+        &__item-numb {
+            font-size: 46px;
+            @include title-item;
+            font-family: Montserrat-Bold, sans-serif;
+        }
+        &__item-title {
+            font-size: 24px;
+            padding: 5px 0;
+            @include title-item;
+        }
+        &__item-subtitle {
+            font-size: 20px;
+            @include title-item;
+        }
+        &__item-info {
+            font-size: 20px;
+            font-family: Montserrat-Bold, sans-serif;
+            >span {
+                text-transform: uppercase;
+                font-size: 24px;
+                font-family: Montserrat-ExtraBold;
+            }
+        }
+        &__item-text {
+            font-size: 18px;
+            line-height: 38px;
+            font-family: Montserrat-Medium, sans-serif;
+            margin-bottom: 10px;
+        }
+        &__item-link {
+            font-size: 20px;
+            line-height: 30px;
+            font-family: Montserrat-ExtraBold;
+            color: $color-brown-dark;
+        }
+    }
+    
+    // /results block
+    // hope block
+    .hope {
+        position: relative;
+        background: url('../images/hope-bg.png') no-repeat #412C1E;
+        background-size: cover;
+        background-blend-mode: overlay;
+        text-align: center;
+        padding: 122px 0;
+        color: $color-white;
+        &__leaf-decore {
+            background: url('../images/strategy-leaf-decor.png') center no-repeat;
+            background-size: contain;
+            position: absolute;
+            width: 30px;
+            height: 50px;
+            --animate-duration: 2.5s;
+            &.leaf-decore--1 {
+                width: 130.32px;
+                height: 105.59px;
+                // top: -222px;
+                bottom: 0;
+                left: 0;
+                filter: blur(3px);
+                opacity: 0.5;
+                animation: hope-animate--1 10s linear;
+            }
+            &.leaf-decore--2 {
+                width: 323.32px;
+                height: 268.59px;
+                // top: -129px;
+                bottom: 50px;
+                left: 56px;
+                animation: hope-animate--2 10s linear;
+            }
+        }
+        &__title {
+            font-size: 42px;
+            line-height: 52px;
+            letter-spacing: -0.4px;
+            text-transform: uppercase;
+            color: $color-white;
+            font-family: Montserrat-Bold, sans-serif;
+        }
+        &__subtitle {
+            width: 738px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 32px;
+            font-family: Montserrat-Regular;
+            margin: 28px auto 34px auto;
+            animation-delay: 1s;
+        }
+        &__action {
+            @include display-center;
+            animation-delay: 2s;
+        }
+        &__btn {
+            background: $color-white;
+            border: 2px solid $color-white;
+            border-radius: 100px;
+            font-size: 14px;
+            font-family: Montserrat-Bold, sans-serif;
+            color: $color-brown-dark;
+            width: 238px;
+            height: 50px;
+            cursor: pointer;
+            &.btn--transparent {
+                display: block;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                background: transparent;
+                color: $color-white;
+                padding: 12px 21px 12px 19px;
+                margin-left: 30px;
+            }
+        }
+    }
+    
+    // /hope block
+    // footer
+    .footer {
+        padding-top: 73px;
+        &__logo {
+            display: none
+        }
+        &__top {
+            @include container;
+        }
+        &__items {
+            @include display-btw;
+            align-items: baseline;
+        }
+        &__item {
+            color: $color-brown-dark;
+            font-family: Montserrat-Light, sans-serif;
+        }
+        &__item-text {
+            width: 308px;
+            font-size: 14px;
+            line-height: 161.96%;
+            letter-spacing: -0.7px;
+        }
+        &__item-link {
+            margin-bottom: 22px;
+            >a {
+                color: $color-brown-dark;
+                font-family: Montserrat-Light, sans-serif;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+        &__item-location {
+            >span {
+                font-family: Montserrat-Bold, sans-serif;
+            }
+            &.item-location--numb {
+                margin-top: 50px;
+            }
+        }
+        &__social {
+            display: flex;
+            flex-direction: column;
+            text-align: end;
+            >a {
+                margin-bottom: 13px;
+            }
+        }
+        &__bottom {
+            border-top: 0.5px solid rgba(61, 48, 40, 0.2);
+        }
+        &__bottom-container {
+            @include container;
+            padding: 8px 0 19px 0;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.005em;
+            color: rgba(61, 48, 40, 0.29);
+            font-family: Montserrat-Light, sans-serif;
+        }
+        &__bottom-text-media {
+            display: none
+        }
+    }
+    
+    // /footer
+    @import 'adaptive.scss';
